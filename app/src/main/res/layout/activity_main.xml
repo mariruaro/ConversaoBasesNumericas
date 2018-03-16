@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.marianarv.conversaobasesnumericas.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="388dp"
+        android:layout_height="488dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="11dp">
+
+        <TextView
+            android:id="@+id/textValor"
+            android:layout_width="68dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="354dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/valor"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLimpar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editValor"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/buttonDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textValor" />
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/decimal"
+            app:layout_constraintBottom_toTopOf="@+id/buttonHexadecimal"
+            app:layout_constraintEnd_toStartOf="@+id/buttonOctal"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonBinario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="180dp"
+            android:text="@string/binario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.898"
+            app:layout_constraintStart_toEndOf="@+id/buttonHexadecimal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonHexadecimal"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/hexa"
+            app:layout_constraintBottom_toTopOf="@+id/radioHexa"
+            app:layout_constraintEnd_toStartOf="@+id/buttonBinario"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonOctal"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="2dp"
+            android:text="@string/octal"
+            app:layout_constraintBottom_toTopOf="@+id/buttonBinario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/editValor"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="58dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginStart="17dp"
+            android:text="@string/limpar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textValor" />
+
+        <EditText
+            android:id="@+id/editResposta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/buttonLimpar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioHexa" />
+
+        <RadioButton
+            android:id="@+id/radioBinario"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="167dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="20dp"
+            android:text="Binário"
+            app:layout_constraintBottom_toTopOf="@+id/editResposta"
+            app:layout_constraintEnd_toStartOf="@+id/radioOctal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonHexadecimal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/radioHexa"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="1dp"
+            android:text="Hexadecimal"
+            app:layout_constraintEnd_toStartOf="@+id/radioOctal"
+            app:layout_constraintTop_toTopOf="@+id/radioOctal" />
+
+        <RadioButton
+            android:id="@+id/radioOctal"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="20dp"
+            android:text="Octal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioBinario"
+            app:layout_constraintTop_toBottomOf="@+id/buttonBinario" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
