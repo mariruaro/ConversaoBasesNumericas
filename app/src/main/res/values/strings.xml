@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Conversao Bases Numericas</string>
     <string name="valor">Valor</string>
-    <string name="decimal">Decimal</string>
+    <string name="decimalBinario">Binário-Decimal</string>
+    <string name="decimalHexa">Hexadecimal-Decimal</string>
+    <string name="decimalOctal">Octal-Decimal</string>
     <string name="binario">Binário</string>
     <string name="hexa">Hexadecimal</string>
     <string name="octal">Octal</string>

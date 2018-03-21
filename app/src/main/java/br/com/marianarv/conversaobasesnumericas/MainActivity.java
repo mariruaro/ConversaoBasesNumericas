@@ -6,27 +6,32 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText editValor;
-    Button   buttonDecimal;
+    Button   buttonDecimalBinario;
+    Button   buttonDecimalOctal;
+    Button   buttonDecimalHexa;
     Button   buttonBinario;
     Button   buttonOctal;
     Button   buttonHexadecimal;
     Button   buttonLimpar;
-    EditText editResposta;
+    TextView editResposta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         editValor = (EditText) findViewById(R.id.editValor);
-        buttonDecimal = (Button) findViewById(R.id.buttonDecimal);
+        buttonDecimalBinario = (Button) findViewById(R.id.buttonDeciBinario);
+        buttonDecimalOctal = (Button) findViewById(R.id.buttonDeciOctal);
+        buttonDecimalHexa = (Button) findViewById(R.id.buttonDeciHexa);
         buttonBinario = (Button) findViewById(R.id.buttonBinario);
         buttonOctal = (Button) findViewById(R.id.buttonOctal);
         buttonHexadecimal = (Button) findViewById(R.id.buttonHexadecimal);
         buttonLimpar = (Button) findViewById(R.id.buttonLimpar);
-        editResposta = (EditText) findViewById(R.id.editResposta);
+        editResposta = (TextView) findViewById(R.id.editResposta);
 
         buttonBinario.setOnClickListener(new OnClickListener() {
             @Override
@@ -63,15 +68,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonDecimal.setOnClickListener(new OnClickListener() {
+        buttonDecimalBinario.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = editValor.getText().toString();
 
-               int r = Integer.parseInt(str, 16);
+               int r = Integer.parseInt(str, 2);
 
                 editResposta.setText(""+r);
+            }
+        });
 
+        buttonDecimalOctal.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str = editValor.getText().toString();
+
+                int r = Integer.parseInt(str, 8);
+
+                editResposta.setText(""+r);
+            }
+        });
+
+        buttonDecimalHexa.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str = editValor.getText().toString();
+
+                int r = Integer.parseInt(str, 16);
+
+                editResposta.setText(""+r);
             }
         });
     }
